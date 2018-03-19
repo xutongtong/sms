@@ -21,8 +21,7 @@ func (sf SMSFactory) CreateSMSSDK(platform string) SMS {
 		yp := Yunpian{}
 		return yp
 	case ALI:
-		ali := Aliyun{}
-		return ali
+		fallthrough
 	default:
 		ali := Aliyun{}
 		return ali

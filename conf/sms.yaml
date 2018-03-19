@@ -1,5 +1,5 @@
 # 用户注册
 register:
-  aliTemplateCode: SMS_11111
+  aliTemplateCode: ""
   template: '%s (注册验证码)，如非本人操作请忽略'
   params: [code]

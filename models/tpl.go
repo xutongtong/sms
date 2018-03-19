@@ -24,7 +24,7 @@ type SMSTemplate struct {
 	SignName string       // 签名
 	ContentFormat string  // 短信内容格式
 	Content string        // 加上签名后的短信内容
-	Params []interface{}  // 短信内容中需要适配的参数
+	Params []string  // 短信内容中需要适配的参数
 }
 
 var yamlConf config.Configer
@@ -47,7 +47,7 @@ func (st *SMSTemplate) Init(tpl string) {
 	template := smsConf.(map[string]interface{})
 
 	st.TemplateCode = template[TEMPLATEID].(string)
-	st.Params = template[PARAMS].([]interface{})
+	st.Params = template[PARAMS].([]string)
 	st.ContentFormat = template[TEMPLATE].(string)
 }
 
